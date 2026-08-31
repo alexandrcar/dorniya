@@ -59,21 +59,21 @@ document.addEventListener("DOMContentLoaded", async () => {
             // Если вошел — скрываем модальное окно
             if (overlay) overlay.style.display = "none";
 
-            // 1. Берем ФИО из Google. Если его вдруг нет (бывает редко), берем начало почты
+            // 1. Берем ФИО из Google или начало почты
             const rawName = user.displayName || user.email.split('@')[0] || "unknown";
             
-            // 2. Делаем имя безопасным для ID базы данных (маленькие буквы, вместо пробелов - подчеркивание)
+            // 2. Делаем имя безопасным (маленькие буквы, вместо пробелов - подчеркивание)
             const safeName = rawName.toLowerCase().replace(/\s+/g, '_');
 
-            // 3. Получаем текущую дату (ДД-ММ-ГГГГ)
+            // 3. Получаем текущую дату в формате ГГГГ-ММ-ДД для правильной сортировки
             const date = new Date();
-            const day = String(date.getDate()).padStart(2, '0');
-            const month = String(date.getMonth() + 1).padStart(2, '0');
             const year = date.getFullYear();
-            const dateString = `${day}-${month}-${year}`;
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const day = String(date.getDate()).padStart(2, '0');
+            const dateString = `${year}-${month}-${day}`; // Теперь год идет первым
 
-            // 4. Формируем финальный ID (например: иван_иванов_31-08-2026)
-            const customDocId = `${safeName}_${dateString}`;
+            // 4. Формируем финальный ID (например: 2026-08-31_иван_иванов)
+            const customDocId = `${dateString}_${safeName}`;
 
             // 5. Записываем в Firestore
             try {
