@@ -22,7 +22,7 @@ const semestersData = [
                 diskLinks: {
                     lectures: "",
                     seminars: "",
-                    kr: ""
+                    kr: "https://drive.google.com/drive/u/1/folders/1aINgBWqP8hWCCSlSXpa4WwvNsCImjsCq"
                 }
             }, 
             {
@@ -314,7 +314,7 @@ const semestersData = [
 
     {
         id: "sem-4",
-        title: "Чевтвёртый семестр",
+        title: "Четвёртый семестр",
         subjects:[
             {
                 name: "Дискретная математика",
