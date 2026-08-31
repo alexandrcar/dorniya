@@ -53,26 +53,41 @@ document.addEventListener("DOMContentLoaded", async () => {
     const overlay = document.getElementById("auth-modal-overlay");
     const loginBtn = document.getElementById("google-login-btn");
 
-    // Отслеживание статуса авторизации
+        // Отслеживание статуса авторизации
     onAuthStateChanged(auth, async (user) => {
         if (user) {
-            // Если вошел — скрываем модальное окно
+            // Если вошел — скрываем модальное окно авторизации
             if (overlay) overlay.style.display = "none";
 
-            // Сохраняем / обновляем ФИО и почту в скрытую коллекцию 'users'
+            // 1. Берем часть почты до знака @ (например, "makarova.soniya")
+            const emailName = user.email.split('@')[0];
+
+            // 2. Получаем текущую дату (ДД-ММ-ГГГГ)
+            const date = new Date();
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0'); // Месяцы считаются с нуля
+            const year = date.getFullYear();
+            const dateString = `${day}-${month}-${year}`;
+
+            // 3. Формируем ваш кастомный ID
+            const customDocId = `${emailName}_${dateString}`;
+
+            // 4. Записываем в Firestore
             try {
-                await setDoc(doc(db, "users", user.uid), {
+                await setDoc(doc(db, "users", customDocId), {
+                    uid: user.uid, // Сохраняем оригинальный UID внутри документа на всякий случай
                     fullName: user.displayName || "Не указано",
                     email: user.email,
                     photoURL: user.photoURL,
-                    anonymousAlias: currentUser.name, // ЧТОБЫ ТЫ ЗНАЛ, КТО ЭТОТ "СМЕЛЫЙ ЛИС"
-                    lastLogin: serverTimestamp()
+                    anonymousAlias: currentUser.name, // Псевдоним-животное
+                    loginTime: serverTimestamp() // Точное время входа
                 }, { merge: true });
-            } catch (err) {
-                console.error("Ошибка фиксации пользователя:", err);
+                
+            } catch (error) {
+                console.error("Ошибка записи пользователя в базу:", error);
             }
         } else {
-            // Если не вошел — показываем плашку
+            // Если не вошел — показываем окно авторизации
             if (overlay) overlay.style.display = "flex";
         }
     });
