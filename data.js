@@ -66,7 +66,7 @@ const semestersData = [
                 diskLinks: {
                     lectures: "",
                     seminars: "",
-                    kr: ""
+                    kr: "https://drive.google.com/drive/folders/1As4Guh6n7lZzBxaMgqN-eYBEHigy3Ir-?usp=sharing"
                 }
             }, 
             {
@@ -122,10 +122,10 @@ const semestersData = [
         title: "Второй семестр",
         subjects:[
             {
-                name: "Дискретная математика",
-                attestation: "Зачет",
-                professor: ["Кочугаев Пётр Николаевич"],
-                description: "Описание дискретки",
+                name: "Алгебра и геометрия",
+                attestation: "Экзамен",
+                professor: ["Никонов Владимир Иванович"],
+                description: "Описание предмета",
                 diskLinks: {
                     lectures: "",
                     seminars: "",
@@ -133,10 +133,88 @@ const semestersData = [
                 }
             }, 
             {
-                name: "Дифференциальные уравнения",
+                name: "Алгоритмы и структуры данных",
+                attestation: "Экзамен",
+                professor: ["Кулягин Андрей Иванович", "Каледин Олег Евгеньевич"],
+                description: "Описание предмета",
+                diskLinks: {
+                    lectures: "",
+                    seminars: "",
+                    kr: ""
+                }
+            }, 
+            {
+            
+                name: "Архитектура компьютеров и операционные системы",
+                attestation: "Экзамен",
+                professor: ["Десяев Евгений Васильевич"],
+                description: "Описание предмета",
+                diskLinks: {
+                    lectures: "",
+                    seminars: "",
+                    kr: ""
+                }
+            }, 
+            {
+                name: "Безопасность жизнедеятельности",
                 attestation: "Зачет",
-                professor: ["Зинина Светлана Халиловна"],
-                description: "Описание диффуров",
+                professor: ["Даськин Иван Николаевич", "Игайкина Ирина Ивановна"],
+                description: "Описание предмета",
+                diskLinks: {
+                    lectures: "",
+                    seminars: "",
+                    kr: ""
+                }
+            }, 
+            {
+                name: "Иностранный язык (Английский)",
+                attestation: "Зачет",
+                professor: ["Рубцова Ольга Валериевна"],
+                description: "Описание предмета",
+                diskLinks: {
+                    lectures: "",
+                    seminars: "",
+                    kr: ""
+                }
+            }, 
+            {
+                name: "Компьютерная графика",
+                attestation: "Зачет",
+                professor: ["Дворянинова Наталья Васильевна", "Бадокина Татьяна Евгеньевна"],
+                description: "Описание предмета",
+                diskLinks: {
+                    lectures: "",
+                    seminars: "",
+                    kr: ""
+                }
+            }, 
+            {
+                name: "Математический анализ",
+                attestation: "Экзамен",
+                professor: ["Костров Олег Геннадьевич", "Чучаев Иван Иванович"],
+                description: "Описание предмета",
+                diskLinks: {
+                    lectures: "",
+                    seminars: "",
+                    kr: ""
+                }
+            }, 
+            {
+                name: "Практикум на ЭВМ",
+                attestation: "Зачет",
+                professor: ["Епишкин Илья Андреевич"],
+                description: "Описание предмета",
+                diskLinks: {
+                    lectures: "",
+                    seminars: "",
+                    kr: ""
+                }
+            }, 
+            {
+                name: "Физра вживую (Элективные дисциплины и т.д...)",
+                attestation: "Зачет",
+                professor: ["Комарова Нина Анатольевна"],
+                description: "Описание предмета",
                 diskLinks: {
                     lectures: "",
                     seminars: "",
