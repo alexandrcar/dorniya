@@ -53,41 +53,44 @@ document.addEventListener("DOMContentLoaded", async () => {
     const overlay = document.getElementById("auth-modal-overlay");
     const loginBtn = document.getElementById("google-login-btn");
 
-        // Отслеживание статуса авторизации
+    // Отслеживание статуса авторизации
     onAuthStateChanged(auth, async (user) => {
         if (user) {
-            // Если вошел — скрываем модальное окно авторизации
+            // Если вошел — скрываем модальное окно
             if (overlay) overlay.style.display = "none";
 
-            // 1. Берем часть почты до знака @ (например, "makarova.soniya")
-            const emailName = user.email.split('@')[0];
+            // 1. Берем ФИО из Google. Если его вдруг нет (бывает редко), берем начало почты
+            const rawName = user.displayName || user.email.split('@')[0] || "unknown";
+            
+            // 2. Делаем имя безопасным для ID базы данных (маленькие буквы, вместо пробелов - подчеркивание)
+            const safeName = rawName.toLowerCase().replace(/\s+/g, '_');
 
-            // 2. Получаем текущую дату (ДД-ММ-ГГГГ)
+            // 3. Получаем текущую дату (ДД-ММ-ГГГГ)
             const date = new Date();
             const day = String(date.getDate()).padStart(2, '0');
-            const month = String(date.getMonth() + 1).padStart(2, '0'); // Месяцы считаются с нуля
+            const month = String(date.getMonth() + 1).padStart(2, '0');
             const year = date.getFullYear();
             const dateString = `${day}-${month}-${year}`;
 
-            // 3. Формируем ваш кастомный ID
-            const customDocId = `${emailName}_${dateString}`;
+            // 4. Формируем финальный ID (например: иван_иванов_31-08-2026)
+            const customDocId = `${safeName}_${dateString}`;
 
-            // 4. Записываем в Firestore
+            // 5. Записываем в Firestore
             try {
                 await setDoc(doc(db, "users", customDocId), {
-                    uid: user.uid, // Сохраняем оригинальный UID внутри документа на всякий случай
+                    uid: user.uid,
                     fullName: user.displayName || "Не указано",
                     email: user.email,
                     photoURL: user.photoURL,
-                    anonymousAlias: currentUser.name, // Псевдоним-животное
-                    loginTime: serverTimestamp() // Точное время входа
+                    anonymousAlias: currentUser.name, 
+                    loginTime: serverTimestamp() 
                 }, { merge: true });
                 
             } catch (error) {
                 console.error("Ошибка записи пользователя в базу:", error);
             }
         } else {
-            // Если не вошел — показываем окно авторизации
+            // Если не вошел — показываем окно входа
             if (overlay) overlay.style.display = "flex";
         }
     });
