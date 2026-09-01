@@ -22,7 +22,7 @@ const semestersData = [
                 diskLinks: {
                     lectures: "",
                     seminars: "",
-                    kr: "https://drive.google.com/drive/u/1/folders/1aINgBWqP8hWCCSlSXpa4WwvNsCImjsCq"
+                    kr: "https://drive.google.com/drive/folders/1aINgBWqP8hWCCSlSXpa4WwvNsCImjsCq?usp=sharing"
                 }
             }, 
             {
