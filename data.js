@@ -11,7 +11,7 @@ const semestersData = [
                 diskLinks: {
                     lectures: "",
                     seminars: "",
-                    kr: ""
+                    kr: "https://drive.google.com/drive/folders/1fX8aaBEInlh5mUY5rdMe7TYef6eXJ_G9?usp=sharing"
                 }
             }, 
             {
@@ -129,7 +129,7 @@ const semestersData = [
                 diskLinks: {
                     lectures: "",
                     seminars: "",
-                    kr: "https://drive.google.com/drive/folders/1fX8aaBEInlh5mUY5rdMe7TYef6eXJ_G9?usp=sharing"
+                    kr: ""
                 }
             }, 
             {
