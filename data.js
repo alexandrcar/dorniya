@@ -95,7 +95,7 @@ const semestersData = [
                 name: "Физра в тестах (Физическая культура и спорт)",
                 attestation: "Зачет",
                 professor: ["Комарова Нина Анатольевна"],
-                description: "Просто чтобы было. Делайте тесты в срок.Ы",
+                description: "Просто чтобы было. Делайте тесты в срок.",
                 diskLinks: {
                     lectures: "",
                     seminars: "https://drive.google.com/drive/folders/1zqJK6sTLEJqBLaRpC6HDJMxLViVVHhRb?usp=sharing",
@@ -129,7 +129,7 @@ const semestersData = [
                 diskLinks: {
                     lectures: "",
                     seminars: "",
-                    kr: ""
+                    kr: "https://drive.google.com/drive/folders/1fX8aaBEInlh5mUY5rdMe7TYef6eXJ_G9?usp=sharing"
                 }
             }, 
             {
