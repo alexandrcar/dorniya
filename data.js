@@ -7,7 +7,7 @@ const semestersData = [
                 name: "Алгебра и геометрия",
                 attestation: "Зачет",
                 professor: ["Никонов Владимир Иванович"],
-                description: "Описание предмета",
+                description: "Фундаментальный предмет, тратьте много времени дома на разбор пройденных тем. Уверуйте в матрицы.",
                 diskLinks: {
                     lectures: "",
                     seminars: "",
@@ -18,7 +18,7 @@ const semestersData = [
                 name: "Аналитическая геометрия",
                 attestation: "Экзамен",
                 professor: ["Сухарев Лев Александрович"],
-                description: "Описание предмета",
+                description: "Фундаментальный предмет, тратьте много времени дома на разбор пройденных тем. i j k.",
                 diskLinks: {
                     lectures: "",
                     seminars: "",
@@ -40,7 +40,7 @@ const semestersData = [
                 name: "Иностранный язык (Английский)",
                 attestation: "Зачет",
                 professor: ["Рубцова Ольга Валериевна"],
-                description: "Описание предмета",
+                description: "По количеству д/з привосходит все остальные предметы вместе взятые, стоит пропустить пару - увязните в долгах.",
                 diskLinks: {
                     lectures: "",
                     seminars: "",
@@ -51,10 +51,10 @@ const semestersData = [
                 name: "История России",
                 attestation: "Зачет с оценкой (дифференцированный)",
                 professor: ["Святкин Михаил Юрьевич", "Першина Татьяна Анатольевна"],
-                description: "Описание предмета",
+                description: "Спидран по всей истории России. На зачете спрашивают страшные вещи, все что ниже пятерки - легко получается атвоматом у М.Ю. Святкина.",
                 diskLinks: {
                     lectures: "",
-                    seminars: "",
+                    seminars: "https://drive.google.com/drive/folders/1XuyFND5qx7v7w_wS0R9IaiwYtHDg4XSh?usp=sharing",
                     kr: ""
                 }
             }, 
@@ -62,7 +62,7 @@ const semestersData = [
                 name: "Математический анализ",
                 attestation: "Экзамен",
                 professor: ["Костров Олег Геннадьевич", "Чучаев Иван Иванович"],
-                description: "Описание предмета",
+                description: "Фундаментальный предмет, всё что непонятно - разбирайте сразу. С каждой новой парой матана Вы все дальше от Бога...",
                 diskLinks: {
                     lectures: "",
                     seminars: "",
@@ -73,7 +73,7 @@ const semestersData = [
                 name: "Основы программирования",
                 attestation: "Экзамен",
                 professor: ["Каменева Инга Олеговна"],
-                description: "Описание предмета",
+                description: "C++. Название предмета говорит само за себя.",
                 diskLinks: {
                     lectures: "",
                     seminars: "",
@@ -87,7 +87,7 @@ const semestersData = [
                 description: "Описание предмета",
                 diskLinks: {
                     lectures: "",
-                    seminars: "",
+                    seminars: "https://drive.google.com/drive/folders/1pxU7IUwstWMK07osUZbYqqOEnMlMl2lx?usp=sharing",
                     kr: ""
                 }
             }, 
@@ -95,10 +95,10 @@ const semestersData = [
                 name: "Физра в тестах (Физическая культура и спорт)",
                 attestation: "Зачет",
                 professor: ["Комарова Нина Анатольевна"],
-                description: "Описание предмета",
+                description: "Просто чтобы было. Делайте тесты в срок.Ы",
                 diskLinks: {
                     lectures: "",
-                    seminars: "",
+                    seminars: "https://drive.google.com/drive/folders/1zqJK6sTLEJqBLaRpC6HDJMxLViVVHhRb?usp=sharing",
                     kr: ""
                 }
             }, 
@@ -125,7 +125,7 @@ const semestersData = [
                 name: "Алгебра и геометрия",
                 attestation: "Экзамен",
                 professor: ["Никонов Владимир Иванович"],
-                description: "Описание предмета",
+                description: "Фундаментальный предмет, тратьте много времени дома на разбор пройденных тем. Уверуйте в матрицы.",
                 diskLinks: {
                     lectures: "",
                     seminars: "",
@@ -148,7 +148,7 @@ const semestersData = [
                 name: "Архитектура компьютеров и операционные системы",
                 attestation: "Экзамен",
                 professor: ["Десяев Евгений Васильевич"],
-                description: "Описание предмета",
+                description: "Программирование на пальцах. Чем быстрее сдадите все работы - тем лучше.",
                 diskLinks: {
                     lectures: "",
                     seminars: "",
@@ -170,7 +170,7 @@ const semestersData = [
                 name: "Иностранный язык (Английский)",
                 attestation: "Зачет",
                 professor: ["Рубцова Ольга Валериевна"],
-                description: "Описание предмета",
+                description: "По количеству д/з привосходит все остальные предметы вместе взятые, стоит пропустить пару - увязните в долгах.",
                 diskLinks: {
                     lectures: "",
                     seminars: "",
@@ -192,7 +192,7 @@ const semestersData = [
                 name: "Математический анализ",
                 attestation: "Экзамен",
                 professor: ["Костров Олег Геннадьевич", "Чучаев Иван Иванович"],
-                description: "Описание предмета",
+                description: "Фундаментальный предмет, всё что непонятно - разбирайте сразу. С каждой новой парой матана Вы все дальше от Бога...",
                 diskLinks: {
                     lectures: "",
                     seminars: "",
@@ -241,6 +241,7 @@ const semestersData = [
             }, 
             {
                 name: "Дифференциальные уравнения",
+                attestation: "Зачет",
                 professor: ["Зинина Светлана Халиловна"],
                 description: "Описание диффуров",
                 diskLinks: {
@@ -251,8 +252,9 @@ const semestersData = [
             },
             {
                 name: "Иностранный язык (Английский)",
+                attestation: "Экзамен",
                 professor: ["Рубцова Ольга Валериевна"],
-                description: "Описание англа",
+                description: "По количеству д/з привосходит все остальные предметы вместе взятые, стоит пропустить пару - увязните в долгах.",
                 diskLinks: {
                     lectures: "",
                     seminars: "",
@@ -261,6 +263,7 @@ const semestersData = [
             },
             {
                 name: "Математические основы теории кодирования и защиты информации",
+                attestation: "Экзамен",
                 professor: ["Сухарев Лев Александрович"],
                 description: "Описание предмета",
                 diskLinks: {
@@ -271,8 +274,9 @@ const semestersData = [
             },
             {
                 name: "Математический анализ",
+                attestation: "Экзамен",
                 professor: ["Костров Олег Геннадьевич", "Чучаев Иван Иванович"],
-                description: "Описание предмета",
+                description: "Фундаментальный предмет, всё что непонятно - разбирайте сразу. С каждой новой парой матана Вы все дальше от Бога...",
                 diskLinks: {
                     lectures: "",
                     seminars: "",
@@ -281,6 +285,7 @@ const semestersData = [
             },
             {
                 name: "Объектно-ориентированное и функциональное программирование",
+                attestation: "Экзамен",
                 professor: ["Каледин Олег Евгеньевич", "Шибайкин Сергей Дмитриевич"],
                 description: "Описание предмета",
                 diskLinks: {
@@ -291,6 +296,7 @@ const semestersData = [
             },
             {
                 name: "Сетевые и облачные технологии",
+                attestation: "Зачет",
                 professor: ["Макаров Юрий Алексеевич"],
                 description: "Описание предмета",
                 diskLinks: {
@@ -301,6 +307,7 @@ const semestersData = [
             },
             {
                 name: "Физ-ра (Элективные дисциплины и т.д...)",
+                attestation: "Зачет",
                 professor: ["Комарова Нина Анатольевна"],
                 description: "Описание предмета",
                 diskLinks: {
@@ -318,6 +325,7 @@ const semestersData = [
         subjects:[
             {
                 name: "Дискретная математика",
+                attestation: "Экзамен",
                 professor: ["Кочугаев Пётр Николаевич"],
                 description: "Описание дискретки",
                 diskLinks: {
@@ -328,6 +336,7 @@ const semestersData = [
             }, 
             {
                 name: "Дифференциальные уравнения",
+                attestation: "Экзамен",
                 professor: ["Зинина Светлана Халиловна"],
                 description: "Описание диффуров",
                 diskLinks: {
